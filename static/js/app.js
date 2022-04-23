@@ -6,8 +6,8 @@ var tbody = d3.select("tbody");
 
 function buildTable(data){
     // clear out existing data
-    tbody(''); 
-    data.array.forEach(dataRow => {
+    tbody.html(''); 
+    data.forEach(dataRow => {
         let row = tbody.append("tr");
         // loop through location,shape,duration
         Object.values(dataRow).forEach((val) => { 
